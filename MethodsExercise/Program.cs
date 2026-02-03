@@ -2,31 +2,33 @@
 {
     public class Program
     {
+        //METHOD 1 - ADDITION
+        public static int AddNumbers(int a, int b)
+        {
+            return a + b;
+        }
+        
+        //METHOD 2 - SUBTRACTION
+        public static int SubtractNumbers(int a, int b)
+        {
+            return a - b;
+        }
+        
+        //METHOD 3 - MULTIPLICATION
+        public static int MultiplyNumbers(int a, int b)
+        {
+            return a * b;
+        }
+        
+        //METHOD 4 - DIVISION
+        public static int DivideNumbers(int a, int b)
+        {
+            return a / b;
+        }
+        
+        
         static void Main(string[] args)
         {
-            /* Exercise 1:
-               Write a C# program that takes user input and creates a story. Ask the user for things like a name, color, an animal, etc. Make up a story and be creative. Hint: Use Console.ReadLine() to take user input and store the input into a variable.
-               
-               Ask the user “What is your name?” Store the input.
-               
-               EXAMPLE:
-               
-               Console.WriteLine("What is your name?"); // output
-               var name = Console.ReadLine(); // input
-               Record user input, for each of these. Combine all answers for a fun, short story.
-               
-               EXAMPLES:
-               
-               Name: Michael
-               
-               Favorite Color: Blue
-               
-               Favorite Animal: Walrus
-               
-               Favorite Band: The Beatles
-               
-               Extra points - turn the answers into a fun short story! Save, commit, and push to Github */
-
             Console.WriteLine("Hey! What is your first name?");
             string firstName = Console.ReadLine();
             
@@ -49,6 +51,27 @@
                               $" color is {favColor} and your favorite animal is a {favAnimal}? ...That's weird...Really..." +
                               $" a {favAnimal}? That's strange, but I won't judge you... And you like to listen to music" +
                               $" by the band {favBand}? ...Ok, well... I said I wouldn't judge you... but I am hardcore.");
+            
+            Thread.Sleep(2000); 
+            Console.WriteLine("----------------------------------");
+            Console.WriteLine("PLEASE WAIT");
+            Thread.Sleep(2000); 
+            Console.WriteLine("----------------------------------");
+            Thread.Sleep(2000); 
+            Console.WriteLine(" ");
+
+            Console.WriteLine("Give me a number");
+            int userNum1 = int.Parse(Console.ReadLine());
+            
+            Console.WriteLine("Give me another number");
+            int userNum2 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Addition: " + AddNumbers(userNum1, userNum2));
+            Console.WriteLine("Subtraction: " + SubtractNumbers(userNum1, userNum2));
+            Console.WriteLine("Multiplication: " + MultiplyNumbers(userNum1, userNum2));
+            Console.WriteLine("Division: " + DivideNumbers(userNum1, userNum2));
+
+
 
         }
     }
